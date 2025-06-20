@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartão 3D - Éllen Lopes de Oliveira</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #66418f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card-container {
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 320px;
+      height: 500px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease-in-out;
+      border-radius: 20px;
+    }
+
+    .card-container:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .front {
+      background: linear-gradient(135deg, #8800ff, #4e0994);
+      color: white;
+    }
+
+    .back {
+      background-color: white;
+      color: #462580;
+      transform: rotateY(180deg);
+    }
+
+    .foto {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 16px;
+    }
+
+    .nome {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .profissao {
+      font-size: 16px;
+      margin-top: 5px;
+      opacity: 0.9;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .contato h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      letter-spacing: 4px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .contato p {
+      font-size: 15px;
+      margin: 6px 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .redes {
+      margin-top: 20px;
+      display: flex;
+      gap: 35px;
+      justify-content: center;
+    }
+
+    .redes img {
+      height: 64px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .redes img:hover {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-side front">
+        <img src="img/eu.png" alt="Foto de Perfil" class="foto">
+        <h1 class="nome">Éllen Lopes de Oliveira</h1>
+        <p class="profissao">Fisioterapeuta</p>
+      </div>
+      <div class="card-side back">
+        <div class="contato">
+          <h3>Contato</h3>
+          <p>Email: ellenoliveira.0726@gmail.com</p>
+          <p>Telefone: +55 (85) 92150-9532</p>
+          <div class="redes">
+            <a href="https://www.instagram.com/ellenlvra" target="_blank">
+              <img src="img/insta.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/ellenoliveira07" target="_blank">
+              <img src="img/GitHub.png" alt="GitHub">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
